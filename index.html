@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wishlist_style.css">
+
+    <title>Task8.1</title>
+</head>
+<body>
+    <ul id="wishlist">
+        <li>Пароочиститель</li>
+        <li>Моющий пылесос (чистить мягкую мебель + пол)</li>
+        <li>Курс по дизайну от ИТМО </li>
+        <li>Книга «Чистый код»</li>
+        <li>Книга по JS как на амазоне</li>
+    </ul>
+<!--
+    <div id='myDiv'>
+         Наведите курсор сюда
+    </div>
+    <div id='secondDiv'>
+         Наведите курсор сюда</div>
+    <div id='thirdDiv'>
+         Наведите курсор сюда</div>
+
+    <script>
+  const div = document.getElementById('myDiv');
+  
+  div.addEventListener('mouseover', function() {
+    this.style.color = 'red';
+  });
+  div.addEventListener('mouseout', function() {
+    this.style.color = 'black';
+  });
+</script>
+-->
+
+  <script>
+      
+    const list = document.getElementById('wishlist');
+
+    list.addEventListener('click', (event) => {
+      const target = event.target;
+  
+      // Проверяем, что клик был именно по элементу `li`
+      if (target.tagName === 'LI') {
+        // Удаляем подсветку со всех элементов
+        const items = list.querySelectorAll('li');
+        items.forEach(item => item.style.backgroundColor = '');
+    
+        // Подсвечиваем текущий элемент
+        target.style.backgroundColor = '#5f7bb0';
+      }
+    });
+
+  </script>
+</body>
+</html>

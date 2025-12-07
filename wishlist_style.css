@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+    flex-direction: column;
+    background-image: linear-gradient(-30deg, #68d1e6, #8e54db);
+    color: rgb(218, 238, 255);
+}
+
+#wishlist {
+    margin: 0;
+    padding: 0;
+    margin-top: 150px;
+    margin-left: 35%;
+    list-style: none;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#wishlist li {
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   border-bottom: 1px solid #ddd;
+   cursor: grab;
+   transition: background-color 0.3s ease;
+   padding: 5px;
+}
+
+#wishlist li:hover {
+  background-color: rgba(241, 241, 241, 0.64);
+  color: rgb(76, 159, 231); 
+}
+
+#wishlist li.active {
+  background-color: #5f7bb0;
+  color: #333;
+  cursor: grabbing;
+}
