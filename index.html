@@ -5,39 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="wishlist_style.css">
 
-    <title>Wishlist</title>
+    <title>Вишлист</title>
 </head>
 <body>
+
+    <input type="text" id="textInput" placeholder="Введите новое желание">
+    <button id="elem">Добавить желание</button>
+
+
     <ul id="wishlist">
         <li>Пароочиститель</li>
         <li>Моющий пылесос (чистить мягкую мебель + пол)</li>
         <li>Курс по дизайну от ИТМО </li>
         <li>Книга «Чистый код»</li>
         <li>Книга по JS как на амазоне</li>
+        <li>Плюшевая или фланелевая пижама/костюм для дома</li>
     </ul>
-<!--
-    <div id='myDiv'>
-         Наведите курсор сюда
-    </div>
-    <div id='secondDiv'>
-         Наведите курсор сюда</div>
-    <div id='thirdDiv'>
-         Наведите курсор сюда</div>
 
-    <script>
-  const div = document.getElementById('myDiv');
-  
-  div.addEventListener('mouseover', function() {
-    this.style.color = 'red';
-  });
-  div.addEventListener('mouseout', function() {
-    this.style.color = 'black';
-  });
-</script>
--->
 
   <script>
-      
+    
+    const p_text_ch = document.getElementById('elem');
+        
+        function addListElem() {
+            const textInput = document.getElementById('textInput');
+            const ul = document.getElementById('wishlist');
+            const new_li = document.createElement('li');
+            new_li.textContent = textInput.value;;
+            ul.appendChild(new_li);
+        };
+
+        document.querySelector('button').addEventListener('click', addListElem);
+
+
     const list = document.getElementById('wishlist');
 
     list.addEventListener('click', (event) => {
@@ -58,3 +58,44 @@
 </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!--
+    <div id='myDiv'>
+         Наведите курсор сюда
+    </div>
+    <div id='secondDiv'>
+         Наведите курсор сюда</div>
+    <div id='thirdDiv'>
+         Наведите курсор сюда</div>
+
+    <script>
+  const div = document.getElementById('myDiv');
+  
+  div.addEventListener('mouseover', function() {
+    this.style.color = 'red';
+  });
+  div.addEventListener('mouseout', function() {
+    this.style.color = 'black';
+  });
+</script>
+-->
